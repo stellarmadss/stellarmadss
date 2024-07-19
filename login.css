@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('D:/Anime Wallpaper/comic.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 450px; /* Adjusted width */
+    height: 450px; /* Adjusted height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: rgba(255, 255, 255, 0.05);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.login-box {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 24px; /* Adjusted font size */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    border: none;
+    border-radius: 20px; /* Rounded edges */
+    outline: none;
+    color: #333;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -10px;
+    font-size: 10px;
+    color: #333;
+}
+
+.forgot-password {
+    display: block;
+    margin-bottom: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background: white;
+    border: none;
+    border-radius: 20px; /* Rounded edges */
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.login-btn:hover {
+    background: #ffd89b;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}

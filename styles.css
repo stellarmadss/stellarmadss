@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+.navbar {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+.navbar .profile img {
+    border-radius: 50%;
+}
+
+.sidebar {
+    padding: 20px;
+    background-color: #444;
+    color: white;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sidebar nav ul li:hover {
+    color: #ff6347;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: white;
+}
+
+.featured {
+    background: url('https://via.placeholder.com/800x400') no-repeat center center/cover;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.featured button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.featured button:hover {
+    background-color: #ff6347;
+}
+
+.suggestions {
+    margin-top: 20px;
+}
+
+.suggestions h2 {
+    margin-bottom: 10px;
+}
+
+.suggestion-list {
+    display: flex;
+    gap: 20px;
+}
+
+.suggestion-item {
+    text-align: center;
+}
+
+.suggestion-item img {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.suggestion-item img:hover {
+    transform: scale(1.1);
+}
+
+.continue-watching {
+    grid-column: 1 / -1;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.continue-list {
+    display: flex;
+    gap: 20px;
+}
+
+.continue-item {
+    text-align: center;
+}
+
+.continue-item img {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.continue-item img:hover {
+    transform: scale(1.1);
+}
